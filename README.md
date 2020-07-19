@@ -15,24 +15,29 @@ Students are required to sign up in order to access the tuition matching algorit
 Tutors, however, do not need to sign up as they are only required to list their services in a form.
 
 **Tutor Profiles**
+
 Tutors who signed up will have their profiles listed for students to view. Profiles include their age, gender, qualifications and the subject they teach.
 
 **Request for tutor**
+
 Students interested to find a tutor for a particular subject can fill up the tutor request form where they will specify their preferences like gender and qualifications of the tutor.
 After that, we match the student's preferences with tutors whose profile match their specifications.
 
 **Write a testimonial**
+
 Our website provide a platform for students to share their tutoring experience with a particular tutor listed on the website.
 Students have to specify the tutor name while writing the testimonial and we ensure that they can only write testimonials for tutors that have been listed on our website and that no blank description are submitted.
 To ensure the testimonials are valid, a student must sign in to write a testimonial for contact-tracing purposes.
 
 **Testimonials**
+
 This is a page that displays testimonials written by students regarding their experience with a particular tutor. However, their names will not be displayed so
 that they can be anonymous.
 
 ## Algorithms
 
 **Tutor Sign-Up**
+
 Tutors can fill up this form to get their profile listed on our website.
 Upon filling it up, their data will be stored in the database.
 ```
@@ -61,6 +66,7 @@ def tutor_signup():
 
 
 **Matching students to tutors**
+
 We will search the database for the desired qualities that a student requires from his/her tutor and provide a match to the student.
 The student will then be able to email the tutor to arrange a session with the tutor.
 
@@ -82,6 +88,7 @@ def request_tutor():
 ```
 
 **Posting a testimonial**
+
 When the student submits his/her testimonial, the testimonial will be recorded in our database and reflected in the list of testimonials
 containing all the tutors' testimonials.
 
@@ -99,5 +106,4 @@ def testimonial():
         row = db.execute("SELECT * FROM tutors")
         return render_template("testimonial.html", row = row)
 ```
-
 
